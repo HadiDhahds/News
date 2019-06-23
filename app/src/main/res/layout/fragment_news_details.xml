@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.NewsDetailsFragment">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/detailsName" android:textColor="#000"
+                        android:textSize="22dp"/>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp" tools:src="@tools:sample/backgrounds/scenic[16]"
+                        android:id="@+id/detailsImage" android:scaleType="centerCrop"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/detailsContent" android:textColor="#000"
+                        android:textSize="20dp"/>
+                <TextView
+                        android:text="By :"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/byText"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/detailsAuther"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
