@@ -43,8 +43,8 @@ class MainNewsFragment : Fragment() {
         try {
 
         CoroutineScope(Dispatchers.IO).launch {
+            val response = getData.getNews()
             withContext(Dispatchers.Main){
-                    val response = getData.getNews()
                 try {
 
                     val manager : FragmentManager = activity?.supportFragmentManager!!

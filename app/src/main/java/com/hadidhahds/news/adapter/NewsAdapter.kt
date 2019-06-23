@@ -1,5 +1,6 @@
 package com.hadidhahds.news.adapter
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
@@ -32,13 +33,13 @@ class NewsAdapter(val manager: FragmentManager, val list: ArrayList<NewsData>) :
 
     inner class NewsHolder(view : View): RecyclerView.ViewHolder(view) {
         val item = view
+        @SuppressLint("SetTextI18n")
         fun bind(news : NewsData){
 
             item.mainNewsName.text = news.title
 
-            if (news.author != null) item.mainNewsAuther.text = news.author
+            if (news.author != null) item.mainNewsAuther.text = "By : ${news.author}"
             else {
-                item.customByText.visibility = View.GONE
                 item.mainNewsAuther.visibility = View.GONE
             }
             Glide.with(item).load(news.urlToImage).into(item.mainNewsImage)
