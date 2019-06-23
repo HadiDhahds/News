@@ -25,6 +25,10 @@ class MainNewsFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        retainInstance = true
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +54,7 @@ class MainNewsFragment : Fragment() {
                     val manager : FragmentManager = activity?.supportFragmentManager!!
 
                     if (response.isSuccessful) {
+                        mainProgressBar.visibility = View.GONE
                         newsRecyvlerView?.apply {
                             layoutManager = LinearLayoutManager(activity?.applicationContext)
                             adapter = NewsAdapter(manager, response.body()?.list!!)

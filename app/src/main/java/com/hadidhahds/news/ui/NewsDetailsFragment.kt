@@ -6,17 +6,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.bumptech.glide.Glide
 
 import com.hadidhahds.news.R
-import com.hadidhahds.news.data.RetrofitFactory
 import kotlinx.android.synthetic.main.fragment_news_details.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.lang.Exception
+
 class NewsDetailsFragment : Fragment() {
 
     override fun onCreateView(
